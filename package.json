@@ -4,7 +4,9 @@
   "description": "FB Messenger Platform client",
   "main": "index.js",
   "scripts": {
-    "test": "standard && tap test/*.js --cov"
+    "test": "standard && tap test/*.js --cov",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,13 @@
   "homepage": "https://github.com/remixz/messenger-bot#readme",
   "dependencies": {
     "request": "^2.71.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "nock": "^9.0.0",
     "standard": "^8.0.0",
     "tap": "^8.0.0"
-  }
+  },
+  "snyk": true
 }
